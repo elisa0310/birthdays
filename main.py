@@ -1,6 +1,14 @@
 #! /usr/bin/env python3
 
-from birthdays import return_birthday
+import sys
 
-return_birthday('Albert Einstein')
-return_birthday('Alan Turing')
+from bdpacakge.bdmodule import return_birthday
+
+
+
+firstname = sys.argv[1]
+lastname = sys.argv[2]
+
+full_name = firstname + ' ' + lastname
+
+return_birthday(full_name)
